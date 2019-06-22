@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 class Books extends Component {
 
   render() {
-
     let books = this.props.books.map(book => <li key={book.id}>{book.title} by {book.authorName}</li>);
 
     return (
@@ -18,7 +17,7 @@ class Books extends Component {
 };
 
 const mapStateToProps = state => {
-  return { books: state.books }
+  return { books: state.bks }
 }
 
 export default connect(mapStateToProps)(Books);
